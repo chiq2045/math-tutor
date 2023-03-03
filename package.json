@@ -25,6 +25,7 @@
   "scripts": {
     "postinstall": "husky install",
     "start": "parcel src/index.html",
-    "check": "tsc"
+    "check": "tsc",
+    "build": "parcel build src/index.html"
   }
 }
