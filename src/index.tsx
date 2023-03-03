@@ -1,9 +1,18 @@
 import { createRoot } from "react-dom/client";
 import { App } from "./app";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { CookieMultiplication } from "./apps/cookie-multiplication";
-import { LongAddSub } from "./apps/long-add-sub";
-import { StrictMode } from "react";
+import { lazy, StrictMode, Suspense } from "react";
+
+const CookieMultiplication = lazy(() =>
+  import("./apps/cookie-multiplication").then((module) => ({
+    default: module.CookieMultiplication,
+  }))
+);
+const LongAddSub = lazy(() =>
+  import("./apps/long-add-sub").then((module) => ({
+    default: module.LongAddSub,
+  }))
+);
 
 const router = createBrowserRouter([
   {
@@ -12,11 +21,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "cookie-multiplication",
-        element: <CookieMultiplication />,
+        element: (
+          <Suspense fallback={<div>...Loading</div>}>
+            <CookieMultiplication />
+          </Suspense>
+        ),
       },
       {
         path: "long-addition-subtraction",
-        element: <LongAddSub />,
+        element: (
+          <Suspense fallback={<div>...Loading</div>}>
+            <LongAddSub />
+          </Suspense>
+        ),
       },
     ],
   },

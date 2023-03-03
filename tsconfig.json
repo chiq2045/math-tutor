@@ -8,6 +8,7 @@
     "jsxImportSource": "react",
     "noEmit": true,
     "esModuleInterop": true,
+    "module": "ESNext",
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
