@@ -259,6 +259,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/compressor-brotli@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "@parcel/compressor-brotli@npm:2.8.3"
+  dependencies:
+    "@parcel/plugin": 2.8.3
+  checksum: abe045cf900d6454fe784353e542c4431558c94a8fa095d13389af75cec406c8831d9dbb92ab878953e7d6d16379800d5fd880c6d20da91909c60f25e44ec1e5
+  languageName: node
+  linkType: hard
+
+"@parcel/compressor-gzip@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "@parcel/compressor-gzip@npm:2.8.3"
+  dependencies:
+    "@parcel/plugin": 2.8.3
+  checksum: fd671978318e69773d3d28ae927cf51fb9f68d6cbcfeac9f7917cc6a4e65503297f0120ee75856538257a2e9b94612087de7fb4b6001424f72a5e1c0c72d26e7
+  languageName: node
+  linkType: hard
+
 "@parcel/compressor-raw@npm:2.8.3":
   version: 2.8.3
   resolution: "@parcel/compressor-raw@npm:2.8.3"
@@ -268,7 +286,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/config-default@npm:2.8.3":
+"@parcel/config-default@npm:2.8.3, @parcel/config-default@npm:^2.8.3":
   version: 2.8.3
   resolution: "@parcel/config-default@npm:2.8.3"
   dependencies:
@@ -308,7 +326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/core@npm:2.8.3":
+"@parcel/core@npm:2.8.3, @parcel/core@npm:^2.8.3":
   version: 2.8.3
   resolution: "@parcel/core@npm:2.8.3"
   dependencies:
@@ -2178,6 +2196,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "math-tutor@workspace:."
   dependencies:
+    "@parcel/compressor-brotli": ^2.8.3
+    "@parcel/compressor-gzip": ^2.8.3
+    "@parcel/config-default": ^2.8.3
+    "@parcel/core": ^2.8.3
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     husky: ^8.0.3
